@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Empleo</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Solicitud de empleo
+        </h1>
+    </header>
+    <main>
+        <form action="" method="post" name="solicitud">
+            <fieldset style="width: 920px;">
+                <legend>Datos Personales</legend>
+                <table style="text-align: center;">
+                    <tr>
+                        <td>Apellido Paterno</td>
+                        <td>Apellido Materno</td>
+                        <td>Nombre(s)</td>
+                        <td>Edad</td>
+                        <td>Sexo</td>
+                    </tr>                    
+                    <tr>
+                        <td><input type="text" name="apellido_p"></td>
+                        <td><input type="text" name="apellido_m"></td>
+                        <td><input type="text" name="nombre"></td>
+                        <td><input type="number" name="edad"></td>
+                        <td rowspan="3">
+                            <input type="radio" value="Masculino" name="sexo">
+                            <label>Masculino</label>
+                            <br>
+                            <input type="radio" value="Femenino" name="sexo">
+                            <label>Femenino</label>
+                        </td>                      
+                    </tr>                    
+                    <tr>
+                        <td>Domicilio</td>
+                        <td>Colonia</td>
+                        <td>C&oacute;digo Postal</td>
+                        <td>Tel&eacute;fono</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="domicilio"></td>
+                        <td><input type="text" name="colonia"></td>
+                        <td><input type="text" name="codigo_postal"></td>
+                        <td><input type="tel" name="telefono"></td>
+                    </tr>
+                    <tr>
+                        <td>Ciudad, Estado</td>
+                        <td colspan="2">Lugar de Nacimiento</td>
+                        <td>Fecha de Nacimiento</td>
+                        <td>Nacionalidad</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="ciudad"></td>
+                        <td colspan="2">
+                            <input type="text" name="lugar_nacimiento" style="width: 100%;">
+                        </td>
+                        <td><input type="date" name="fecha_nacimiento"></td>
+                        <td><input type="text" name="nacionalidad"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Vive con:</td>
+                        <td>Estatura</td>
+                        <td>Peso</td>
+                    </tr>
+                    <td colspan="3">
+                        <input type="checkbox" name="vivecon" value="padres">
+                        <label>Sus Padres</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" name="vivecon" value="familia">
+                        <label>Su Familia</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" name="vivecon" value="parientes">
+                        <label>Parientes</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" name="vivecon" value="solo">
+                        <label>Solo</label>
+                    </td>
+                    <td><input type="text" name="estatura"></td>
+                    <td><input type="text" name="peso"></td>
+                </table>
+            </fieldset>
+
+            <fieldset style="width: 920px;">
+                <legend>Documentaci&oacute;n</legend>
+                <table style="width: 100%; text-align: center;">
+                    <tr>
+                        <td colspan="2">Clave Unica de Registro de Poblaci&oacute;n</td>
+                        <td colspan="2">Afore</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="text" style="width: 90%;" name="CURP">
+                        </td>
+                        <td colspan="2">
+                            <input type="text" style="width: 90%;" name="AFORE">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Reg. Fed. De Contribuyentes</td>
+                        <td>Numero de Seguridad Social</td>
+                        <td>Cartilla de Servicio Militar No.</td>
+                        <td>Pasaporte No.</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="reg_fed_contribuyentes"></td>
+                        <td><input type="text" name="num_seguridad_social"></td>
+                        <td><input type="text" name="cartilla_militar"></td>
+                        <td><input type="text" name="num_pasaporte"></td>
+                    </tr>
+                    <tr>
+                        <td>Tiene licencia de manejo</td>
+                        <td>Clase y n&uacute;mero de licencia</td>
+                        <td colspan="2">
+                            Siendo extranjero que documentos le permiten trabajar en el pa&iacute;s
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" name="licencia_manejo"><label>No</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="licencia_manejo"><label>Si</label>
+                        </td>
+                        <td><input type="text" name="num_licencia"></td>
+                        <td colspan="2"><input type="text" name="tiene_documentos" style="width: 90%;"></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset style="width: 920px;">
+                <legend>Estado de Salud y H&aacute;bitos Personales</legend>
+                <table style="width: 100%; text-align: center;">
+                    <tr>
+                        <td colspan="2">¿Como considera su estado de salud actual?</td>
+                        <td colspan="4">¿Padece alguna enfermedad cr&oacute;nica?</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="radio" name="salud_actual" value="bueno"><label>Bueno</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="salud_actual" value="regular"><label>Regular</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="salud_actual" value="malo"><label>Malo</label>
+                        </td>
+                        <td colspan="4">
+                            <input type="radio" name="enfermedad_cronica" value="No"><label>No</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="enfermedad_cronica" value="Si"><label>Si</label>                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">¿Pr&aacute;ctica Ud. Alg&uacute;n Deporte?</td>
+                        <td colspan="2">¿Pertenece a alg&uacute;n Club Social o Deportivo?</td>
+                        <td colspan="2">¿Cu&aacute;l es su pasatiempo favorito?</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="text" name="practica_deporte" style="width: 90%;"></td>
+                        <td colspan="2"><input type="text" name="pertenece_club" style="width: 90%;"></td>
+                        <td colspan="2"><input type="text" name="pasatiempo_fav" style="width: 90%;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="6">¿Cu&aacute;l es su meta en la vida?</td>
+                    </tr>
+                    <tr>
+                        <td colspan="6"><input type="text" name="meta_vida" style="width: 90%;"></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset style="width: 920px;">
+                <legend>Datos Familiares</legend>
+                <table style="width: 100%;" border="1px">
+                    <tr style="text-align: center;">
+                        <td style="width: 20%;">Nombre</td>
+                        <td style="width: 5%;">Vive</td>
+                        <td style="width: 5%;">Fin</td>
+                        <td style="width: 40%;">Domicilio</td>
+                        <td style="width: 30%;">Ocupaci&oacute;n</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%;">Padre</td>
+                        <td style="width: 5%;"></td>
+                        <td style="width: 5%;"></td>
+                        <td style="width: 40%;"></td>
+                        <td style="width: 30%;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%;">Madre</td>
+                        <td style="width: 5%;"></td>
+                        <td style="width: 5%;"></td>
+                        <td style="width: 40%;"></td>
+                        <td style="width: 30%;"></td>
+                    </tr>
+                    <tr>
+                        <td style="width: 20%;">Esposa(o)</td>
+                        <td style="width: 5%;"></td>
+                        <td style="width: 5%;"></td>
+                        <td style="width: 40%;"></td>
+                        <td style="width: 30%;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="5" style="height: 50px;">Nombre y edades de los hijos</td>
+                    </tr>
+                </table>
+            </fieldset>
+
+
+        </form>
+    </main>
+</body>
+</html>
